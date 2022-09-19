@@ -47,5 +47,5 @@ steps:
   displayName: Docker_Push
   inputs:
     containerRegistry: 'docker'
-    repository: 'azure-webapp'
+    repository: 'seshumf77/azure-webapp'
     command: 'push'
