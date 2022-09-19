@@ -31,10 +31,12 @@ steps:
     ArtifactName: 'warfile'
     publishLocation: 'Container'
 - task: Docker@2
+  displayName: Docker_Login
   inputs:
     containerRegistry: 'docker'
     command: 'login'
 - task: Docker@2
+  displayName: Docker_Build
   inputs:
     containerRegistry: 'docker'
     repository: 'azure-webapp'
@@ -42,6 +44,7 @@ steps:
     Dockerfile: '**/AzureDockerfile'
 
 - task: Docker@2
+  displayName: Docker_Push
   inputs:
     containerRegistry: 'docker'
     repository: 'azure-webapp'
