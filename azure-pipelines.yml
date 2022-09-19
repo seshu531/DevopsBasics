@@ -39,7 +39,7 @@ steps:
   displayName: Docker_Build
   inputs:
     containerRegistry: 'docker'
-    repository: 'azure-webapp'
+    repository: 'seshumf77/azure-webapp'
     command: 'build'
     Dockerfile: '**/AzureDockerfile'
 
